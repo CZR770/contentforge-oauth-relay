@@ -1,0 +1,20 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex,nofollow">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<title>Returning to ContentForge…</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,sans-serif;max-width:680px;margin:60px auto;padding:0 24px}
+code{word-break:break-all}
+</style>
+<h2>Returning to ContentForge…</h2>
+<p id="status">Sending the Instagram authorization result back to the ContentForge app on this Mac.</p>
+<script>
+(() => {
+  const local = 'http://127.0.0.1:8788/oauth/instagram/callback' + location.search;
+  document.getElementById('status').textContent =
+    'If ContentForge does not open automatically, make sure ContentForge is running and reload this page.';
+  location.replace(local);
+})();
+</script>
